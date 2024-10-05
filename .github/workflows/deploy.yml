@@ -1,0 +1,29 @@
+name: Deploy Academic Hub
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: FTP Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Create .env file
+        run: |
+          echo -e "DB_HOST=${{ secrets.DB_HOST }}\nDB_USER=${{ secrets.DB_USER }}\nDB_PASS=${{ secrets.DB_PASS }}\nDB_NAME=${{ secrets.DB_NAME }}" > ./dist/.env
+        shell: bash
+
+      - name: Upload files via FTP
+        uses: sebastianpopp/ftp-action@v1
+        with:
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: './dist'
+          remoteDir: '/htdocs/'
