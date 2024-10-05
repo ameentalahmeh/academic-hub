@@ -26,21 +26,10 @@ SET
 /*!40101 SET NAMES utf8mb4 */
 ;
 
---
--- Database: `academy`
---
-DROP DATABASE IF EXISTS `academy`;
-
-CREATE DATABASE IF NOT EXISTS `academy` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-
-USE `academy`;
-
 -- --------------------------------------------------------
 --
 -- Table structure for table `course`
 --
-DROP TABLE IF EXISTS `course`;
-
 DROP TABLE IF EXISTS `course`;
 
 CREATE TABLE `course` (
