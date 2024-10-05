@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    name: FTP Deploy
+    name: Deploy Academic Hub 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -20,7 +20,7 @@ jobs:
         shell: bash
 
       - name: Upload files via FTP
-        uses: sebastianpopp/ftp-action@v1
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           host: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
