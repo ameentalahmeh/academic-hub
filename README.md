@@ -58,9 +58,6 @@ Ensure you have the following installed:
 8. Access the application:
    - Open your web browser and navigate to `http://localhost/academic-hub`.
 
-Here's an updated `README.md` file with the screenshots added in a well-designed format. The paths are set to the ones you've provided:
-
-
 ## Screenshots
 
 Here are some screenshots showcasing the **Academic Hub** application:
