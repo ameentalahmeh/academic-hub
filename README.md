@@ -2,6 +2,9 @@
 
 **Academic Hub** is a platform designed to facilitate academic collaboration, resource sharing, and knowledge exchange. It serves students, educators, and researchers seeking a centralized hub for accessing academic content, managing research, and connecting with peers and mentors.
 
+## Website
+### [Academic Hub](http://academic-hub.byethost13.com)
+
 ## Technologies
 
 - **Frontend**: HTML, CSS, Bootstrap
